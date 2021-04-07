@@ -1,0 +1,212 @@
+.nav-container{
+    width: 100%;
+    padding: 2rem 0;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+}
+
+.logo-mobile {
+    display: none;
+}
+
+/* .menu-toggle{
+    display: none;
+} */
+
+.nav-menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.nav-links{
+    color: var(--color-white);
+    transition: all .2s ease-in-out;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-right: 3rem;
+    line-height: 2.8rem;
+    position: relative;
+}
+
+.nav-menu li{
+    cursor: pointer;
+}
+
+.nav-links::before{
+    content: "";
+    position: absolute;
+    bottom: -.2rem;
+    width: 0%;
+    height: .1rem;
+    background-color: var(--color-blue);
+    transition: all .4s ease-in-out;
+}
+
+.nav-links:hover{
+    color: var(--color-blue);
+}
+
+.active-link::before{
+    width: 100%;
+}
+
+.nav-links:hover:not(.active-link)::before{
+    content: "";
+    width: 100%;
+}
+
+.navbar .social-media{
+    display: flex;
+    align-items: center;
+}
+
+.navbar .social-media a{
+    color: var(--color-white);
+    font-size: 3.202rem;
+    margin-left: 2rem;
+    transition: all .4s ease-in-out;
+}
+
+.navbar .social-media a:hover{
+    color: var(--color-blue);
+}
+
+.menu-toggle{
+    display: none;
+}
+
+
+
+/*----------------------------------
+        Media Queries
+----------------------------------*/
+@media screen and (max-width: 1088px){
+    .navbar{
+        padding: 0 2rem;
+        width: 100%;
+    }
+}
+@media screen and (max-width: 780px){
+    .nav-container{
+        /* position: relative; */
+        padding: 0 0 2rem;
+    }
+    .navbar .social-media{
+        display: none;
+    }
+    .nav-menu .logo-desktop{
+        display: none;
+    }
+    .navbar .logo-mobile{
+        display: block;
+        z-index: 999;
+    }
+    .menu-toggle {
+        display:flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 4rem;
+        cursor: pointer;
+        z-index: 999;
+    }
+    
+    .menu-toggle .bar{
+        width: 10rem;
+        height: .3rem;
+        margin: 0 0 .8rem;
+        transition: all .3s ease-in-out;
+        background-color: var(--color-white);
+        border-radius: 1rem;
+    }
+    .nav-menu{
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        transition: all .5s ease;
+        height: 40rem;
+        height: 100%;
+        background-color: rgba(0,0,0,.85);
+        top: 0rem;
+        left: -100%;
+        opacity: 0;
+        padding: 15rem 0;
+        z-index: 900;
+    }
+    .nav-links{
+        font-size: 2rem;
+    }
+    .nav-menu.active{
+        left: 0;
+        opacity: 1;
+    }
+    .navbar{
+        position: static;
+    }
+
+    .menu-toggle .bar:nth-child(1){
+        /* width: 2.667rem; */
+        width: 4rem;
+    }
+    .menu-toggle .bar:nth-child(2){
+        width: 3rem;
+    }
+    .menu-toggle .bar:nth-child(3){
+        width: 2rem;
+    }
+    
+    .menu-toggle:hover .bar:nth-child(1){
+        width: 3rem;
+    }
+    .menu-toggle:hover .bar:nth-child(2){
+        width: 4rem;
+    }
+    .menu-toggle:hover .bar:nth-child(3){
+        width: 1.5rem;
+    }
+    
+    #mobile-menu {
+        position: absolute;
+        top: 2rem;
+        right: 5%;
+        transform: translate(5%, 20%);
+        z-index: 99rem;
+    }
+    
+    .menu-toggle.is-active .bar:nth-child(1){
+        width: 4rem;
+    }
+    .menu-toggle.is-active .bar:nth-child(2){
+        width: 4rem;
+    }
+    .menu-toggle.is-active .bar:nth-child(3){
+        width: 4rem;
+    }
+    
+    .menu-toggle.is-active .bar:nth-child(1){
+        transform: rotate(45deg) translate(0,1.5rem);
+    }
+    .menu-toggle.is-active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .menu-toggle.is-active .bar:nth-child(3){
+        transform: rotate(-45deg) translate(0,-1.5rem);
+    }
+}
+
+
+
+

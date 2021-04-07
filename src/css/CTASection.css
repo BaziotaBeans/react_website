@@ -1,0 +1,147 @@
+.cta-section{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 5rem 0;
+    width: 100%;
+}
+
+.cta-section__left{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-right: 5rem;
+}
+
+.cta-section__left img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.cta-section__right{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 3rem 0 3rem 8rem;
+}
+
+.cta-section__right h2, 
+.cta-section__right h5{
+    color: var( --color-dark-blue);  
+} 
+
+.cta-section__right h5{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.cta-section__right h2{
+    margin: 2rem 0; 
+}
+
+.cta-section__right .subcribe-text{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cta-section__right .subcribe-text span{
+    color: var(--color-grey);
+    font-size: 1.8rem;
+}
+
+.cta-section__right .input-group{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.input-group {
+    margin-top: 2.5rem;
+}
+
+.input-group input[type="text"]{
+    padding: 2rem 3rem;
+    margin-right: 1rem;
+}
+
+.input-group button{
+    font-size: 2rem;
+    padding: 1.65rem 3rem;
+}
+
+/*--------------------------------
+Media Queries
+--------------------------------*/
+@media screen and (max-width: 1088px){
+    .cta-section{
+        display: grid;
+        grid-template-columns: auto;
+        padding: 5rem 2rem;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .cta-section__right{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 3rem 0;
+    }
+    .cta-section__right h2, 
+    .cta-section__right h5{
+        text-align: center;
+    } 
+    .cta-section__right .subcribe-text span{
+        text-align: center;
+    }
+    .cta-section__right .subcribe-text h5{
+        text-align: center;
+    }
+    .cta-section__right .subcribe-text{
+        align-items: center;
+    }
+}
+
+
+@media screen and (max-width: 550px){
+    .desktop-section__left p{
+        font-size: 2rem;
+    }
+    .cta-section__right .input-group{
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+    .cta-section__right .input-group input,
+    .cta-section__right .input-group button{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 460px){
+    .cta-section__right .input-group button{
+        margin-top: 2rem;
+    }
+    .cta-section__right h5{
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .cta-section__right h2{
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+    }
+    .cta-section__right .subcribe-text span{
+        margin-top: .5rem;
+    }
+}

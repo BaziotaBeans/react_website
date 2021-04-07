@@ -1,0 +1,186 @@
+.features-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10rem;
+    padding: 5rem 0;
+    width: 100%;
+}
+
+.features-section-text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 55.2rem;
+    height: 18.2rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.features-section__title{
+    color: var(--color-dark-blue);
+    margin-bottom: 3rem;
+}
+
+.features-section__text{
+    font-size: 2.8rem;
+    /* font-size: 2vw; */
+    line-height: 1;
+    color: var(--color-grey);
+    /* margin: 3rem 0; */
+}
+
+.features-section__items{
+    width: 869px;
+    height: 257px;
+    margin: 2rem 0 5rem;
+}
+
+.features-section__items .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.features-section__items .row .col{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 25.5rem;
+    height: 25.7rem;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.features-section__items .row .col h4{
+    margin: 2.5rem 0;
+    color: var(--color-dark-blue);
+}
+
+.features-section__items .row .col p{
+    font-size: 1.8rem;
+    color: var(--color-grey);
+    line-height: 1.4;
+}
+
+.features-section__video{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    margin: 2rem 0;
+}
+
+.video-container{
+    position: relative;
+}
+
+.features-section__video video{
+    width: 100%;
+    width: 60rem;
+    height: auto;
+    border-radius: 3.5rem;
+    background: url(../images/VideoBackground.png) no-repeat;
+    background-size: cover;
+    z-index: 0;
+    outline: none;
+}
+
+
+.video-container::before{
+    content: "";
+    background: linear-gradient(45deg, #ff0000, 
+    #ff7300, #fffb00, #48ff00, #00ffd5, 
+    #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -.2rem;
+    left: -.2rem;
+    top: -.5rem;
+    left: .5rem;
+    bottom: 0;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(.5rem);
+    width: calc(60rem + 1rem);
+    height: calc(100% + 1rem);
+    animation: glowing 20s linear infinite;
+    opacity: 1;
+    transition: opacity .3s ease-in-out;
+    border-radius: 3.5rem;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+
+
+@media screen and (max-width: 1088px){
+    .features-section{
+        padding: 5rem 4rem;
+    }
+    .features-section__items{
+        width: 100%;
+        height: 100%;
+        margin: 2rem 0 5rem;
+    }
+}
+@media screen and (max-width: 780px){
+    .features-section-text{
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        margin: 2rem 0;
+    }
+    .features-section__video video{
+        width: 100%;
+        height: auto;
+        border-radius: 3.5rem;
+        background: url(../images/VideoBackground.png) no-repeat;
+        background-size: cover;
+        z-index: 0;
+        outline: none;
+    }
+    .video-container::before{
+        content: "";
+        background: linear-gradient(45deg, #ff0000, 
+        #ff7300, #fffb00, #48ff00, #00ffd5, 
+        #002bff, #7a00ff, #ff00c8, #ff0000);
+        position: absolute;
+        top: -1rem;
+        left: -1rem;
+        bottom: 0;
+        background-size: 400%;
+        z-index: -1;
+        filter: blur(.5rem);
+        width: calc(100% + 2rem);
+        height: calc(100% + 2rem);
+        animation: glowing 20s linear infinite;
+        opacity: 1;
+        transition: opacity .3s ease-in-out;
+        border-radius: 3.5rem;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .features-section__title{
+
+    }
+    .features-section__text{
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .features-section__title{
+        font-size: 3.5rem;
+    }
+}

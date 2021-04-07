@@ -1,0 +1,81 @@
+.pricing-section{
+    background-color: var(--color-dark-blue);
+    width: 100%;
+}
+
+.pricing-section-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5rem 0;
+}
+
+.pricing-section-text{
+    text-align: center;
+    width: 55.2rem;
+}
+
+.pricing-section-content h2{
+    color: var(--color-white);
+    margin: 2rem 0;
+}
+.pricing-section-content p{
+    color: var(--color-white);
+    font-size: 2.8rem;
+    line-height: 1.5;
+    font-size: 2.8rem;
+}
+
+.princing-section-row{
+    margin: 7rem 0 5rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0 4rem;
+    align-items: center;
+}
+
+@media screen and (max-width: 1088px){
+    .testimonial-section {
+        padding: 5rem 1rem;
+    }
+    .princing-section-row{
+        margin: 7rem 0 5rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0 4rem;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 750px){
+    .princing-section-row{
+        margin: 7rem 0 5rem;
+        display: grid;
+        grid-template-columns: auto;
+        grid-gap: 4rem 0rem;
+        align-items: center;
+    }
+    .pricing-section-text{
+        width: 100%;
+        padding: 0 1rem;
+    }
+}
+
+
+
+@media screen and (max-width: 550px){
+    .pricing-section-text p{
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .pricing-section-text h2{
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+
+
