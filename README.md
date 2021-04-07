@@ -1,6 +1,10 @@
-# Getting Started with Create React App
+# Website built with React
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## [Figma UI](https://www.figma.com/file/bJsiBDJzXKnBEsY0Pn77Bh/Figmaland-Business-Landing-page-Community?node-id=65%3A0)
+
+## [See in action 🚀](https://goofy-torvalds-25e8f6.netlify.app/)
 
 ## Available Scripts
 
